@@ -27,7 +27,7 @@ app.use("/feed", feedRoutes);
 app.use("/auth", authRoutes);
 
 
-  app.listen(8080,(req,res)=>{
+  app.listen(process.env.PORT,(req,res)=>{
     console.log("succesfully run in 8080")
 
   })
