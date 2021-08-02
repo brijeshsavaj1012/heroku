@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 mongoose
-  .connect("mongodb://localhost:27017/MyDb", {useNewUrlParser: true, useUnifiedTopology: true})
+  .connect("mongodb+srv://lets_help:SXWJl2Dyn43toCZX@cluster0.roshd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => {
     console.log('mongoose running')
   })
