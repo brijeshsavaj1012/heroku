@@ -3,6 +3,13 @@ const jwt = require("jsonwebtoken");
 const { validationResult, Result } = require("express-validator");
 
 const User = require("../models/user");
+exports.sign = (req,res,next)=>{
+  const name = req.body.name;
+  const abc = new Abc({
+    name: name
+  });
+  return abc.save();
+}
 
 exports.signup = (req, res, next) => {
   const errors = validationResult(req);
