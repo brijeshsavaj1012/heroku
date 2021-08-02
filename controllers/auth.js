@@ -57,7 +57,7 @@ exports.log = (req, res, next) => {
       res.status(200).json({token: token , userId: loadedUser._id.toString()});
     })
     .catch((err) => {
-      if (!statusCode) {
+      if(!statusCode) {
         err.statusCode = 500;
       }
       next(err);
