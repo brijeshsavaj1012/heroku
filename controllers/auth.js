@@ -10,6 +10,7 @@ exports.sign = (req,res,next)=>{
     name: name
   });
   return abc.save();
+  res.send("save");
 }
 
 exports.signup = (req, res, next) => {
