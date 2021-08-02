@@ -5,6 +5,9 @@ const User =require('../models/user')
 const authController = require('../controllers/auth');
 
 const router = express.Router();
+router.put('/sign',[
+    body('name'),
+],authController.sign)
 
 router.put('/signup',[
     body('email')
