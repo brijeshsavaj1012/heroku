@@ -9,8 +9,9 @@ exports.sign = (req,res,next)=>{
   const abc = new Abc({
     name: name
   });
-  return abc.save();
   res.send("save");
+  return abc.save();
+ 
 }
 
 exports.signup = (req, res, next) => {

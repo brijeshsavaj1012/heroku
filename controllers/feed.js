@@ -71,7 +71,7 @@ exports.createPost = (req, res, next) => {
     title: title,
     content: content,
     imageUrl: "images/looms1.jpg",
-    creator: 123 // req.userId
+    creator: req.userId
   });
   post
     .save()
