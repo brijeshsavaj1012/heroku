@@ -6,6 +6,7 @@ const path = require("path");
 const User =require('../models/user');
 const Post = require("../models/post"); //all the post access through the 'Post'
 
+
 exports.getPosts = (req, res, next) => {
   const currntPage = req.query.page || 1;
   const perPage = 2;
