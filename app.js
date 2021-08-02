@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require("express");
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 var cors = require('cors');
@@ -27,8 +28,10 @@ app.use("/feed", feedRoutes);
 app.use("/auth", authRoutes);
 
 
-  app.listen(process.env.PORT,(req,res)=>{
-    console.log("succesfully run in 8080")
+  app.listen(process.env.PORT || 8080,(req,res)=>{
+    console.log("succesfully run in 8080"),
+    console.log(process.env.PORT)
+
 
   })
   app.get('/',(req,res)=>{res.send('This is brij from hustle bustle era')})

@@ -136,6 +136,11 @@ exports.updatePost = (req, res, next) => {
         error.statusCode = 404;
         throw error; //if throw error then it go to catch block and pass the error in 'err'.....
       }
+      if(post.creator.toString() !== req.userId){
+        const error = new Error('Not Authorized');
+        error.statusCode =403;
+        throw error;
+      }
       if (imageUrl !== post.imageUrl) {
         clearImage(post.imageUrl);
       }
