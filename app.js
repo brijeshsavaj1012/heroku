@@ -34,7 +34,7 @@ app.use("/auth", authRoutes);
 
 
   })
-  app.get('/',(req,res)=>{res.send('It is runnung')})
+  app.get('/',(req,res)=>{res.send('It is runnung ///')})
   app.post('/me',async (req,res)=> {
 
     const posts = new post(req.body);
