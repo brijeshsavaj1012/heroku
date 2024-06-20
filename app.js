@@ -49,7 +49,7 @@ app.use("/auth", authRoutes);
   app.get('/me/:id',async(req,res)=>{
     const _id = req.params.id
     const selected = await post.findById(_id)
-    const posts = await post.find({title:'IN THIS MODERN ERA, BRIJESH IS KING'})
+    const posts = await post.find({title:'IN THIS MODERN ERA,...'})
     //zres.setHeader("Access-Control-Allow-Origin", "*");
     res.send(selected)
   })
